@@ -1,0 +1,19 @@
+query nearby($latitude: Int!, $longitude: Int!, $radius: !Int, $count: !Int){
+  nearby(latitude: $latitude, longitude: $longitude, radius: $radius) {
+#   nearby(latitude: 50.11, longitude: 8.66, radius: 2000) {
+    stations(count: $count) {
+      name
+      primaryEvaId
+      location {
+        latitude
+        longitude
+      }
+      facilities {
+        type
+        state
+        description
+        equipmentNumber
+      }
+    }
+  }
+}
